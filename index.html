@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dziennik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>DZIENNIK PRAKTYK</h1>
+        <ul>
+            <li class="nav-student">METRYCZKA</li>
+            <li class="nav-managing">DZIENNICZEK</li>
+            <li class="nav-summary">PODSUMOWANIE</li>
+            <li class="nav-weather">POGODA</li>
+        </ul>
+    </header>
+    <div class="main-page">
+        <div class="student">
+            <div class="student-new">
+                <div class="form-container">
+                    <h2>Wprowadź dane</h2>
+                    <form action="" id="new-student-form">
+                        <label for="name">
+                            <span>Imię</span>
+                            <input type="text" id="name"  required>
+                        </label>
+                        <label for="surname">
+                            <span>Nazwisko</span>
+                            <input type="text" id="surname" required>
+                        </label>
+                        <label for="class">
+                            <span>Klasa</span>
+                            <input type="text" id="class" required>
+                        </label>
+                        <label for="school-year">
+                            <span>Rok szkolny</span>
+                            <input type="text" id="school-year" required>
+                        </label>
+                        <label for="where">
+                            <span>Praktyki odbyte w</span>
+                            <input type="text" id="where" required>
+                        </label>
+                        <label for="date-begin">
+                            <span>Data rozpoczęcia</span>
+                            <input type="date" id="date-begin" required>
+                        </label>
+                        <label for="date-end">
+                            <span>Data zakończenia</span>
+                            <input type="date" id="date-end" required>
+                        </label>
+                        <input type="submit" value="Dodaj" class="btn btn-submit" id="form-new-student">
+                    </form>
+                </div>
+            </div>
+            <div class="student-data disabled">
+                <div class="student-data-container">
+                    <h2>Twoje dane:</h2>
+                    <div class="student-data-wrapper">
+                        <div class="student-data-element">
+                            Imię i nazwisko: <span id="data--name"></span>
+                        </div>
+                        <div class="student-data-element">
+                            Klasa: <span id="data--class"></span>
+                        </div>
+                        <div class="student-data-element">
+                            Rok szkolny: <span id="data--year"></span>
+                        </div>
+                        <div class="student-data-element">
+                            Odbyte w: <span id="data--where"></span>
+                        </div>
+                        <div class="student-data-element">
+                            Data rozpoczęcia: <span id="data--begin"></span>
+                        </div>
+                        <div class="student-data-element">
+                            Data zakończenia: <span id="data--end"></span>
+                        </div>
+                        <input type="button" value="Zmień dane" class="btn btn-change" id="form-change-student-data">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="managing disabled">
+            <div class="form-container">
+                <h2>Wprowadź zajęcia</h2>
+                <form action="" id="new-day-form">
+                    <label for="date">
+                        <span>Data</span>
+                        <input type="date" id="date" required>
+                    </label>
+                    <label for="sector">
+                        <span>Dział</span>
+                        <select name="sector" id="sector" required>
+                        </select>
+                    </label>
+                    <label for="topic">
+                        <span>Temat</span>
+                        <select name="topic" id="topic" disabled required>
+                        </select>
+                    </label>
+                    <label for="hours">
+                        <span>Godziny zrealizowane</span>
+                        <input type="range" id="hours" min="1" max="7" required>
+                        <span id="hours-selected">-</span>
+                    </label>
+                    <label for="grade">
+                        <span>Ocena</span>
+                        <input type="range" id="grade" min="1" max="6" required>
+                        <span id="grade-selected">-</span>
+                    </label>
+                    <label for="raport">
+                        <span>Sprawozdanie</span>
+                        <textarea name="raport" id="raport" rows="5" required></textarea>
+                    </label>
+                    <input type="submit" value="Dodaj" class="btn btn-submit" id="form-new-day">
+                </form>
+            </div>
+        </div>
+        <div class="summary disabled">
+            <div class="summary-table-container">
+                <table>
+                    <tr>
+                        <th>Nazwa działu</th>
+                        <th>Godziny zrealizowane</th>
+                    </tr>
+                    <tr>
+                        <td>Dział 1</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>Dział2</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">RAZEM</td>
+                        <td id="hours-added">50</td>
+                    </tr>
+                    <tr>
+                        <td class="bold">POZOSTAŁO DO ZREALIZOWANIA</td>
+                        <td id="hours-left">110</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="topics-realized ">
+                <div class="topic">
+                    <h2 class="topic-title custom-text">JavaScript</h2>
+                    <div class="topic-sector">Dział: <span class="custom-text">Frontend</span></div>
+                    <div class="topic-date">Data: <span class="custom-text">25.05.2023</span></div>
+                    <div class="topic-hours">Zrealizowane godziny: <span class="custom-text">7</span></div>
+                    <div class="topic-raport">Sprawozdanie: <span class="custom-text"></span></div>
+                    <div class="topic-grade">Ocena: <span class="custom-text">6</span></div>
+                </div>
+                <div class="topic">
+                    <h2 class="topic-title custom-text">JavaScript</h2>
+                    <div class="topic-sector">Dział: <span class="custom-text">Frontend</span></div>
+                    <div class="topic-date">Data: <span class="custom-text">25.05.2023</span></div>
+                    <div class="topic-hours">Zrealizowane godziny: <span class="custom-text">7</span></div>
+                    <div class="topic-raport">Sprawozdanie: <span class="custom-text"></span></div>
+                    <div class="topic-grade">Ocena: <span class="custom-text">6</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="weather disabled">
+            <div class="weather-container">
+                <div class="form-container">
+                    <form action="" id="weather-form">
+                        <label for="city">
+                            <span>Podaj miasto</span>
+                            <input type="text" id="city" placeholder="Gliwice" required>
+                        </label>
+                        <input type="submit" value="Sprawdź pogodę" class="btn btn-submit" id="weather-check">
+                    </form>
+                </div>
+                <div class="weather-data-container">
+                    <div class="weather-data-wrapper">
+                        <h2><span id="city-name"></span>, <span id="country-name"></span></h2>
+                        <div class="weather-element">Prędkość wiatru: <span id="wind" class="custom-text"></span></div>
+                        <div class="weather-element">Temperatura: <span id="temperature" class="custom-text"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

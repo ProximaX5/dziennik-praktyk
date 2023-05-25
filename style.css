@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+/* UTILITY CLASSES */
+
+.disabled {
+    display: none;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #3471eb;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #0953e7;
+}
+
+.custom-text {
+    color: #3471eb;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* NAVBAR */
+
+header {
+    height: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #3471eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header > ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header > ul > li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* METRYCZKA */
+
+.student {
+    margin-top: 100px;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    width: 25%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.form-container {
+    margin: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container > h2 {
+    text-align: center;
+}
+
+form {
+    margin: 30px auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 2px;
+}
+
+.student-data-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.student-data-container > h2 {
+    text-align: center;
+}
+
+.student-data-wrapper {
+    margin-top: 20px;
+}
+
+.student-data-element {
+    margin-bottom: 5px;
+}
+
+.student-data-element > span {
+    color: #0953e7;
+}
+
+.btn-change {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* DZIENNICZEK */
+
+.managing {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    width: 25%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+/* PODSUMOWANIE */
+
+.summary {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.summary-table-container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+table {
+    width: 100%;
+}
+
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-left: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+td:nth-child(1), th:nth-child(1) {
+    width: 60%;
+}
+
+td:nth-child(2), th:nth-child(2) {
+    width: 40%;
+}
+
+tr:has(th) {
+    background-color: #3471eb;
+}
+
+tr:nth-child(even) {
+    background: #bacbee;
+}
+
+tr:nth-child(odd):not(:first-child) {
+    background: #cad7f1;
+}
+
+.topic {
+    border-top: 1px solid #3471eb;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+/* POGODA */
+
+.weather {
+    margin-top: 100px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.weather-data-container {
+    margin: 10px;
+}
+
+.weather-data-wrapper{
+    margin: 0 auto;
+    width: 75%;
+}
